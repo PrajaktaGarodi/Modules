@@ -29,14 +29,19 @@
         </thead>
         <tbody>
           <?php
+
             $sql="Select * From tblusers;";
+
             $result= mysqli_query($conn,$sql);
+
             $rows = mysqli_num_rows($result);
 
             while($rows= mysqli_fetch_array($result))
             {
               echo "<tr>";
-              echo "<td>".$rows['ID']."</td>";
+              echo "<td>".$rows['ID'].
+              "</td>";
+
               echo "<td>".$rows['FirstName'],$rows['LastName']."</td>";
               echo "<td>".$rows['Email']."</td>";
               echo "<td>".$rows['MobileNumber']."</td>";
